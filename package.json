@@ -1,0 +1,45 @@
+{
+  "name": "tmp.JO23wh3wL3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava",
+    "coverage": "nyc npm test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esm": "^3.0.34",
+    "nyc": "^11.8.0"
+  },
+  "devDependencies": {
+    "ava": "1.0.0-beta.4"
+  },
+  "ava": {
+    "babel": {
+      "testOptions": {
+        "presets": [
+          [
+            "module:ava/stage-4",
+            {
+              "modules": false
+            }
+          ]
+        ]
+      }
+    },
+    "require": [
+      "esm"
+    ]
+  },
+  "nyc": {
+    "all": true,
+    "reporter": [
+      "html",
+      "lcov",
+      "text"
+    ]
+  }
+}
